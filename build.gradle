@@ -1,5 +1,18 @@
 plugins {
-    id 'java'
+    id 'application'
+}
+
+application {
+    mainClassName = 'io.netfoundry.ctf.challenge.Main'
+}
+
+repositories {
+    mavenCentral()
+    maven { url = "https://ziti-public.s3.amazonaws.com/maven"  }
+}
+
+dependencies {
+    compile "io.netfoundry.ziti:ziti:0.+"
 }
 
 group 'io.netfoundry.ctf'
